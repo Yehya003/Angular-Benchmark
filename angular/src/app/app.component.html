@@ -1,0 +1,33 @@
+<div class="Benchmark">
+    <div>
+    <h1>Angular {{version}} </h1>
+    <button type="button" class="btn btn-primary btn-block" id="create0" (click)="create(100)" ref="text">Create 100 rows</button> &ensp;
+    <button type="button" class="btn btn-primary btn-block" id="create1" (click)="create(1000)" ref="text">Create 1,000 rows</button>&ensp;
+    <button type="button" class="btn btn-primary btn-block" id="create2" (click)="create(10000)">Create 10,000 rows</button>&ensp;
+    <p></p>
+    <button type="button" class="btn btn-primary btn-block" id="update0" (click)="update(100)">Update 100th row</button> &ensp;
+    <button type="button" class="btn btn-primary btn-block" id="update1" (click)="update(1000)">Update 1000th row</button> &ensp;
+    <button type="button" class="btn btn-primary btn-block" id="update2" (click)="update(10000)">Update 10,000th row</button> &ensp;
+    <p></p>
+    <button type="button" class="btn btn-primary btn-block" id="clear0" (click)="clear(100)">Delete 100th rows</button> &ensp;
+    <button type="button" class="btn btn-primary btn-block" id="clear1" (click)="clear(1000)">Delete 1000th rows</button> &ensp;
+    <button type="button" class="btn btn-primary btn-block" id="clear2" (click)="clear(10000)">Delete 10,000th rows</button> &ensp;
+    <p></p>
+    <button type="button" class="btn btn-primary btn-block" id="select0" (click)="select(100)">Select 100th rows</button>&ensp;
+    <button type="button" class="btn btn-primary btn-block" id="select1" (click)="select(1000)">Select 1000th rows</button>&ensp;
+    <button type="button" class="btn btn-primary btn-block" id="select2" (click)="select(10000)">Select 10,000th rows</button>&ensp;
+    <p></p>
+    <label for="selected" > Num of users selected by ID: {{selected.length}} </label>
+    <p></p>
+</div>
+<div>
+    <table class="table" id="myTab">
+        <tbody>
+            <tr *ngFor="let item of user;">
+                <td class="col-md-1"> {{item.id}} </td>
+                <td class="col-md-4"> {{item.info}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>
